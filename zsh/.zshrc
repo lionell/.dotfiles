@@ -11,3 +11,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme robbyrussell
 
 antigen apply
+
+export GOPATH=$HOME/gopath
+export PATH=$GOPATH:$GOPATH/bin:$PATH
