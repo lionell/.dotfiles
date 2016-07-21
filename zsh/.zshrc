@@ -12,5 +12,5 @@ antigen theme robbyrussell
 
 antigen apply
 
-export GOPATH=$HOME/gopath
+export GOPATH=$HOME/dev
 export PATH=$GOPATH:$GOPATH/bin:$PATH
