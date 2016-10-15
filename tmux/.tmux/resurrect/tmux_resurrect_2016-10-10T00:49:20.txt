@@ -1,0 +1,17 @@
+pane	glob	1	:make	0	:	1	:/home/lionell/dev/playground/basecamp/xlionell_at_gmail.com/project	1	zsh	:
+pane	glob	2	:test	0	:	1	:/home/lionell/dev/playground/basecamp/xlionell_at_gmail.com	1	vi	:vi test/coder_gTest.cpp
+pane	glob	3	:h/cpp	0	:	1	:/home/lionell/dev/playground/basecamp/xlionell_at_gmail.com	1	vi	:vi project/coder.h
+pane	glob	3	:h/cpp	0	:	2	:/home/lionell/dev/playground/basecamp/xlionell_at_gmail.com	0	vi	:vi project/coder.cpp
+pane	glob	4	:play	0	:-	1	:/home/lionell/dev/playground/cpp	1	vi	:vi main.cpp
+pane	glob	4	:play	0	:-	2	:/home/lionell/dev/playground/cpp	0	zsh	:
+pane	glob	5	:zsh	1	:*	1	:/home/lionell/dev/playground/cpp	1	zsh	:
+pane	main	1	:powertop	0	:-	1	:/home/lionell	1	sudo	:sudo powertop
+pane	main	3	:zsh	1	:*	1	:/home/lionell	1	zsh	:
+window	glob	1	0	:	b2be,190x51,0,0,1
+window	glob	2	0	:	b2bf,190x51,0,0,2
+window	glob	3	0	:	9355,190x51,0,0{95x51,0,0,3,94x51,96,0,8}
+window	glob	4	0	:-	2df3,190x51,0,0{95x51,0,0,11,94x51,96,0,12}
+window	glob	5	1	:*	5998,190x51,0,0,19
+window	main	1	0	:-	b2bd,190x51,0,0,0
+window	main	3	1	:*	5997,190x51,0,0,18
+state	glob	main

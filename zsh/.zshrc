@@ -10,5 +10,7 @@ antigen theme robbyrussell
 
 antigen apply
 
-export GOPATH=$HOME/dev
+export GOPATH=$HOME/dev/go
 export PATH=$GOPATH:$GOPATH/bin:$PATH
+export PATH=$HOME/.anaconda/bin:$PATH
+export TERM=xterm-256color

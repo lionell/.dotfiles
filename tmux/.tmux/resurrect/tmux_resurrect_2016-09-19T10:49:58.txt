@@ -1,0 +1,8 @@
+pane	main	1	:sudo	0	:-	1	:/home/lionell/downloads	1	sudo	:sudo powertop
+pane	main	2	:vi	0	:	1	:/home/lionell/dev/playground/cpp	1	vi	:vi main.cpp
+pane	main	2	:vi	0	:	2	:/home/lionell/dev/playground/cpp	0	zsh	:
+pane	main	3	:vi	1	:*	1	:/home/lionell/.dotfiles	1	vi	:vi tmux/.tmux.conf
+window	main	1	0	:-	bebd,190x54,0,0,0
+window	main	2	0	:	c656,190x54,0,0{95x54,0,0,1,94x54,96,0,2}
+window	main	3	1	:*	bec4,190x54,0,0,7
+state	main	

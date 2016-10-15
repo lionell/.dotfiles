@@ -1,1 +1,2 @@
+run --ignore_unsupported_sandboxing
 test --test_output=streamed
