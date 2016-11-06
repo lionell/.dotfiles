@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-obsession'
+" Plug 'tpope/vim-sensible'
+" Plug 'tpope/vim-obsession'
 " Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Plug 'Valloric/YouCompleteMe'
