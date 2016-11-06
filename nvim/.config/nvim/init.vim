@@ -37,3 +37,5 @@ Plug 'tpope/vim-obsession'
 
 " Add plugins to &runtimepath
 call plug#end()
+
+set clipboard+=unnamedplus
