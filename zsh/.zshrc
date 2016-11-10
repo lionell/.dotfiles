@@ -4,8 +4,9 @@ antigen use oh-my-zsh
 
 antigen bundle git
 antigen bundle command-not-found
-
 antigen bundle zsh-users/zsh-syntax-highlighting
+# antigen bundle mafredri/zsh-async
+# antigen bundle sindresorhus/pure
 
 antigen theme agnoster
 
@@ -16,5 +17,5 @@ export PATH=$GOPATH:$GOPATH/bin:$PATH
 
 export PATH=$HOME/.anaconda/bin:$PATH
 
-DEFAULT_USER=lionell
-# export TERM=xterm-256color
+export DEFAULT_USER=lionell
+export LIONELL=true

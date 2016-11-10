@@ -4,15 +4,18 @@
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule "tmux/.tmux/plugins/tmux-colors-solarized"]
-	path = tmux/.tmux/plugins/tmux-colors-solarized
-	url = https://github.com/seebi/tmux-colors-solarized
-[submodule "tmux/.tmux/plugins/tmux-resurrect"]
-	path = tmux/.tmux/plugins/tmux-resurrect
-	url = https://github.com/tmux-plugins/tmux-resurrect
 [submodule "tmux/.tmux/plugins/tmux-sensible"]
 	path = tmux/.tmux/plugins/tmux-sensible
 	url = https://github.com/tmux-plugins/tmux-sensible
+[submodule "tmux/.tmux/plugins/tmux-resurrect"]
+	path = tmux/.tmux/plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
+[submodule "tmux/.tmux/plugins/tmux-pain-control"]
+	path = tmux/.tmux/plugins/tmux-pain-control
+	url = https://github.com/tmux-plugins/tmux-pain-control
+[submodule "tmux/.tmux/plugins/tmux-open"]
+	path = tmux/.tmux/plugins/tmux-open
+	url = https://github.com/tmux-plugins/tmux-open
 [submodule "tmux/.tmux/plugins/tmux-themepack"]
 	path = tmux/.tmux/plugins/tmux-themepack
 	url = https://github.com/jimeh/tmux-themepack
