@@ -20,3 +20,7 @@
 [submodule "tmux/.tmux/plugins/tmux-themepack"]
 	path = tmux/.tmux/plugins/tmux-themepack
 	url = https://github.com/lionell/tmux-themepack
+[submodule "tmux/.tmux/plugins/tmux-online-status"]
+	path = tmux/.tmux/plugins/tmux-online-status
+	url = https://github.com/tmux-plugins/tmux-online-status
+	ignore = dirty

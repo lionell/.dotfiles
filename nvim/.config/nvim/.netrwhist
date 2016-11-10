@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/lionell/dev/playground'
 let g:netrw_dirhist_2='/home/lionell/.vim/plugged'
 let g:netrw_dirhist_3='/home/lionell/.config/powerline'
 let g:netrw_dirhist_4='/home/lionell/tmp/java-getting-started/src/main/resources'
 let g:netrw_dirhist_5='/home/lionell/dev/play/basecamp/xlionell_at_gmail.com-prata-c1/project/02-setting.out.to.cpp'
+let g:netrw_dirhist_6='/home/lionell/.dotfiles/.git'
