@@ -13,6 +13,7 @@
 [submodule "tmux/.tmux/plugins/tmux-pain-control"]
 	path = tmux/.tmux/plugins/tmux-pain-control
 	url = https://github.com/tmux-plugins/tmux-pain-control
+	ignore = dirty
 [submodule "tmux/.tmux/plugins/tmux-open"]
 	path = tmux/.tmux/plugins/tmux-open
 	url = https://github.com/tmux-plugins/tmux-open
