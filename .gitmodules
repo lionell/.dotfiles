@@ -19,4 +19,4 @@
 	url = https://github.com/tmux-plugins/tmux-open
 [submodule "tmux/.tmux/plugins/tmux-themepack"]
 	path = tmux/.tmux/plugins/tmux-themepack
-	url = https://github.com/jimeh/tmux-themepack
+	url = https://github.com/lionell/tmux-themepack
