@@ -5,10 +5,8 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
-# antigen bundle mafredri/zsh-async
-# antigen bundle sindresorhus/pure
-
-antigen theme agnoster
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
 
 antigen apply
 
