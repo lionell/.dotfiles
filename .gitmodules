@@ -33,3 +33,6 @@
 	path = tmux/.tmux/plugins/tmux-online-status
 	url = https://github.com/tmux-plugins/tmux-online-status
 	ignore = dirty
+[submodule "tmux/.tmux/plugins/tmux-prefix-highlight"]
+	path = tmux/.tmux/plugins/tmux-prefix-highlight
+	url = https://github.com/tmux-plugins/tmux-prefix-highlight
