@@ -20,7 +20,3 @@ export PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH
 export DEFAULT_USER=lionell
 export EDITOR='vi'
 alias mux=tmuxinator
-
-stm() {
-	tmux && sleep 5 && tmux kill-session -t 0;
-}
