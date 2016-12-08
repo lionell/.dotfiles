@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'othree/html5.vim'
 " Plug 'tpope/vim-sensible'
-" Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-obsession'
 " Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Plug 'Valloric/YouCompleteMe'
@@ -40,14 +40,15 @@ Plug 'othree/html5.vim'
 call plug#end()
 
 set clipboard+=unnamedplus
+syntax on
+set number
+" set relativenumber
 
 " set autoindent
 " set smarttab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 " set softtabstop=4
 set noexpandtab
 set list
 set listchars=tab:▸\ ,eol:¬
-
-set number
