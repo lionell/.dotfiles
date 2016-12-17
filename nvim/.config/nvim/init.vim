@@ -1,8 +1,18 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'othree/html5.vim'
-" Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-sensible'
+Plug 'sirver/ultisnips'
+Plug 'bling/vim-airline'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'zchee/deoplete-clang'
+" Plug 'ervandew/supertab'
+
+" Plug 'othree/html5.vim'
+" Plug 'tpope/vim-obsession'
+" Plug 'scrooloose/syntastic'
+" Plug 'valloric/youcompleteme'
+" Plug 'scrooloose/nerdtree'
+" Plug 'christoomey/vim-tmux-navigator'
 " Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Plug 'Valloric/YouCompleteMe'
@@ -40,15 +50,29 @@ Plug 'tpope/vim-obsession'
 call plug#end()
 
 set clipboard+=unnamedplus
-syntax on
 set number
-" set relativenumber
 
-" set autoindent
-" set smarttab
 set tabstop=2
 set shiftwidth=2
 " set softtabstop=4
 set noexpandtab
+
 set list
-set listchars=tab:▸\ ,eol:¬
+set listchars+=eol:¬
+
+" Search down into subfolders
+set path+=**
+
+let g:airline_powerline_fonts = 1
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Deoplete completion
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+" let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
+" let g:SuperTabClosePreviewOnPopupClose = 1

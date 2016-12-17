@@ -301,8 +301,9 @@ exec_always --no-startup-id sbxkb
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id setcursor
 
-exec_always --no-startup-id 'setxkbmap -layout "us,ru,ua" -option "grp:alt_space_toggle,caps:swapescape,ctrl:swap_lalt_lctl"'
-exec_always --no-startup-id /home/lionell/.scripts/display.sh
+exec_always --no-startup-id /home/lionell/.scripts/display
+exec_always --no-startup-id /home/lionell/.scripts/keys
+# exec_always --no-startup-id 'setxkbmap -layout "us,ru,ua" -option "grp:alt_space_toggle,caps:swapescape,ctrl:swap_lalt_lctl"'
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
