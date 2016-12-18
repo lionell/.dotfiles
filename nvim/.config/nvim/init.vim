@@ -1,10 +1,37 @@
 call plug#begin('~/.vim/plugged')
 
+" Default plugin to setup
 Plug 'tpope/vim-sensible'
+
 Plug 'sirver/ultisnips'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+Plug 'honza/vim-snippets'
+
+" Golang
+Plug 'fatih/vim-go'
+
+" Tag list
+" Plug 'majutsushi/tagbar'
+" nmap <F8> :TagbarToggle<CR>
+
 Plug 'bling/vim-airline'
+let g:airline_powerline_fonts = 1
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Autocompletion
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'zchee/deoplete-clang'
+" Deoplete completion
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+" let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
+" let g:SuperTabClosePreviewOnPopupClose = 1
+
 " Plug 'ervandew/supertab'
 
 " Plug 'othree/html5.vim'
@@ -50,29 +77,23 @@ Plug 'bling/vim-airline'
 call plug#end()
 
 set clipboard+=unnamedplus
+
+" Show numbers on the left
 set number
 
+" Set tabs width to 2 spaces
 set tabstop=2
 set shiftwidth=2
-" set softtabstop=4
 set noexpandtab
 
+" Display invisible characters
 set list
 set listchars+=eol:¬
 
 " Search down into subfolders
 set path+=**
 
-let g:airline_powerline_fonts = 1
-
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
-
-" Deoplete completion
-" let g:deoplete#enable_at_startup = 1
-" let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
-" let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
-" let g:SuperTabClosePreviewOnPopupClose = 1
+" Use preindexed OpenJDK tags file
+" Generated manually with ctags
+" TODO: Look for better alternative for java
+set tags+=~/.vim/tags/java

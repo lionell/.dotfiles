@@ -303,6 +303,7 @@ exec_always --no-startup-id setcursor
 
 exec_always --no-startup-id /home/lionell/.scripts/display
 exec_always --no-startup-id /home/lionell/.scripts/keys
+exec_always --no-startup-id 'xset r rate 200 20'
 # exec_always --no-startup-id 'setxkbmap -layout "us,ru,ua" -option "grp:alt_space_toggle,caps:swapescape,ctrl:swap_lalt_lctl"'
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
