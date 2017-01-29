@@ -3,9 +3,10 @@ source ~/.zsh/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle git
-antigen bundle tmuxinator
+# antigen bundle tmuxinator
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle soimort/translate-shell
 
 # Set double-row theme
 antigen bundle mafredri/zsh-async

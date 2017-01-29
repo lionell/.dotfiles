@@ -3,6 +3,8 @@ call plug#begin('~/.vim/plugged')
 " Default plugin to setup
 Plug 'tpope/vim-sensible'
 
+Plug 'scrooloose/nerdcommenter'
+
 Plug 'sirver/ultisnips'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-n>"
@@ -10,7 +12,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 Plug 'honza/vim-snippets'
 
 " Golang
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 
 " Tag list
 " Plug 'majutsushi/tagbar'
@@ -97,3 +99,6 @@ set path+=**
 " Generated manually with ctags
 " TODO: Look for better alternative for java
 set tags+=~/.vim/tags/java
+
+" :nmap <Leader>s :source $MYVIMRC<CR>
+" :nmap <Leader>e :e $MYVIMRC<CR>
