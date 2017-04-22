@@ -3,13 +3,21 @@ call plug#begin('~/.vim/plugged')
 " Default plugin to setup
 Plug 'tpope/vim-sensible'
 
-Plug 'scrooloose/nerdcommenter'
+Plug 'google/vim-maktaba' | Plug 'bazelbuild/vim-bazel'
+" Plug 'google/vim-ft-bzl'
 
-Plug 'sirver/ultisnips'
+Plug 'raimondi/delimitmate'
+
+" Plug 'yggdroot/indentline'
+
+" Plug 'scrooloose/nerdcommenter'
+" Plug 'nathanaelkane/vim-indent-guides'
+
+" Group dependencies, vim-snippets depends on ultisnips
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-n>"
 let g:UltiSnipsJumpBackwardTrigger="<c-p>"
-Plug 'honza/vim-snippets'
 
 " Golang
 " Plug 'fatih/vim-go'
@@ -81,16 +89,13 @@ call plug#end()
 set clipboard+=unnamedplus
 
 " Show numbers on the left
-set number
+set number relativenumber
 
 " Set tabs width to 2 spaces
-set tabstop=2
-set shiftwidth=2
-set noexpandtab
+set tabstop=2 shiftwidth=2 expandtab
 
 " Display invisible characters
-set list
-set listchars+=eol:¬
+set list listchars+=eol:¬
 
 " Search down into subfolders
 set path+=**

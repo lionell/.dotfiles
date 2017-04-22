@@ -7,7 +7,7 @@ allow_bold       = true
 allow_italic     = true
 visible_bell     = false
 mouse_autohide   = true
-audible_bell     = true
+audible_bell     = false
 
 # Solarized dark color scheme
 

@@ -1,2 +1,3 @@
-run --ignore_unsupported_sandboxing
+run --ignore_unsupported_sandboxing -c opt
+build --ignore_unsupported_sandboxing -c opt
 test --test_output=streamed

@@ -4,7 +4,7 @@ antigen use oh-my-zsh
 
 antigen bundle git
 # antigen bundle tmuxinator
-antigen bundle command-not-found
+# antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle soimort/translate-shell
 
@@ -25,5 +25,7 @@ export PATH=$HOME/.anaconda/bin:$PATH
 export PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH
 
 export DEFAULT_USER=lionell
-export EDITOR='vi'
-alias mux=tmuxinator
+export EDITOR=vi
+
+alias bazel="bazel --bazelrc=/home/lionell/.bazelrc"
+. /usr/share/z/z.sh
