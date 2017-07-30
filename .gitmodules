@@ -36,3 +36,6 @@
 [submodule "tmux/.tmux/plugins/tmux-prefix-highlight"]
 	path = tmux/.tmux/plugins/tmux-prefix-highlight
 	url = https://github.com/tmux-plugins/tmux-prefix-highlight
+[submodule "xresources/.Xresources.d/solarized"]
+	path = xresources/.Xresources.d/solarized
+	url = https://github.com/solarized/xresources
