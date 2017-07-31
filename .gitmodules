@@ -39,3 +39,6 @@
 [submodule "xresources/.Xresources.d/solarized"]
 	path = xresources/.Xresources.d/solarized
 	url = https://github.com/solarized/xresources
+[submodule "nvim/.local/share/nvim/site/autoload"]
+	path = nvim/.local/share/nvim/site/autoload
+	url = git@github.com:junegunn/vim-plug.git
