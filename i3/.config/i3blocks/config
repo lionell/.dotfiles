@@ -1,0 +1,19 @@
+command=$HOME/.config/i3blocks/scripts/$BLOCK_NAME
+separator_block_width=30
+interval=10
+
+[cpu_usage]
+label= 
+
+[mem_usage]
+label= 
+interval=30
+
+[wifi]
+label= 
+instance=wlp4s0
+
+[battery]
+
+[time]
+command=date +%H:%M
