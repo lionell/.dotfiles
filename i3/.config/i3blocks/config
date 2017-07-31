@@ -7,7 +7,9 @@ label=
 
 [mem_usage]
 label= 
-interval=30
+
+[temperature]
+label= 
 
 [wifi]
 label= 
