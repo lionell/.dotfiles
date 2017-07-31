@@ -1,4 +1,5 @@
 command=$HOME/.config/i3blocks/scripts/$BLOCK_NAME
+align=center
 separator_block_width=30
 interval=10
 
@@ -10,6 +11,8 @@ label=
 
 [temperature]
 label= 
+
+[bandwidth]
 
 [wifi]
 label= 
