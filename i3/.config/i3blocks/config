@@ -6,7 +6,7 @@ interval=10
 label= 
 
 [mem_usage]
-label= 
+label= 
 interval=30
 
 [wifi]
@@ -16,4 +16,5 @@ instance=wlp4s0
 [battery]
 
 [time]
+label= 
 command=date +%H:%M
