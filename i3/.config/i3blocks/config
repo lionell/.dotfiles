@@ -23,3 +23,6 @@ instance=wlp4s0
 [time]
 label= 
 command=date +%H:%M
+
+[volume]
+label= 
