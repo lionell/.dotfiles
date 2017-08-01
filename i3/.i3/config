@@ -24,7 +24,7 @@ bindsym $mod+y border pixel 1
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font xft:Noto Sans 10
-font pango:Source Code Pro, Awesome 15
+font pango:Source Code Pro, Awesome 16
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -42,7 +42,7 @@ bindsym $mod+r exec --no-startup-id rofi -show run
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
+#exec --no-startup-id volumeicon
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
@@ -51,14 +51,10 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 ################################################################################################
 
 # Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-# bindsym $mod+F2 exec palemoon
-# bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
-# bindsym $mod+Shift+F3 exec gksu pcmanfm
 # bindsym $mod+F5 exec terminal -e 'mocp'
 # bindsym $mod+t exec --no-startup-id pkill compton
 # bindsym $mod+Ctrl+t exec --no-startup-id compton -b
@@ -69,7 +65,7 @@ bindsym Print exec --no-startup-id i3-scrot
 # bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 # bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
-# focus_follows_mouse no
+focus_follows_mouse yes
 
 # Change focus
 bindsym $mod+h focus left
@@ -138,15 +134,25 @@ bindsym $mod+minus scratchpad show
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1:
-set $ws2 2:
-set $ws3 3:
-set $ws4 4:
-set $ws5 5:
-set $ws6 6:
-set $ws7 7:
-set $ws8 8:
-set $ws9 9:
+set $ws1   "1:   Shell "
+set $ws2   "2:   Code "
+set $ws3   "3:   Chromium "
+set $ws4   "4:   Files "
+set $ws5   "5:   Documents "
+set $ws6   "6:   Media "
+set $ws7   "7:   Design "
+set $ws8   "8:   Chat "
+set $ws9   "9:   General "
+set $ws0   "10:   Settings "
+# set $ws1 1:
+# set $ws2 2:
+# set $ws3 3:   Code 
+# set $ws4 4:
+# set $ws5 5:
+# set $ws6 6:
+# set $ws7 7:
+# set $ws8 8:
+# set $ws9 9:
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -205,12 +211,6 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
-# Switch to workspace with urgent window automatically
-for_window [urgent=latest] focus
-
-# Reload the configuration file
-# bindsym $mod+Shift+c reload
-
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
@@ -266,8 +266,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
 exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
@@ -275,37 +273,11 @@ exec --no-startup-id blueman
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id fix_xcursor
 
-# Color palette used for i3 
-# Variables are set based on the documentation:
-# https://i3wm.org/dovs/userguide.html#variables
-# Changing the value of one of the variables will
-# effect all the areas with the same color.
-set $i3_background      #2B2C2B
-set $i3_text            #F9FAF9
-set $i3_separator       #454947
-set $i3_color1          #f9faf9
-set $i3_color2          #595B5B
-set $i3_color3          #353836
-set $i3_color4          #16A085
-set $i3_color5          #FDF6E3
-set $i3_color6          #EEE8D5
-set $i3_color7          #E5201D
-set $i3_color8          #808380
-set $i3_color9          #434745
-set $i3_color10         #454948
-set $i3_color11         #80FFF9
-set $i3_color12         #FDF6E3
-set $i3_color13         #CB4B16
-set $i3_color14         #268BD2
-set $i3_color15         #000000
-set $i3_color16         #ffffff
-set $i3_color17         #0c0c0c
-
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	# status_command i3status
 	status_command i3blocks
 	position top
+  strip_workspace_numbers true
 
 ## Please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
@@ -315,31 +287,20 @@ bar {
 	bindsym button5 nop
 	font pango:Source Code Pro, FontAwesome 18
 
-	colors {
-        background $i3_background
-        statusline $i3_text
-        separator  $i3_separator
-
-#                                  border  backgr. text
-        focused_workspace   $i3_background  $i3_color4  $i3_text
-        active_workspace    $i3_background  $i3_color3  $i3_color5
-        inactive_workspace  $i3_background  $i3_background  $i3_color6
-        urgent_workspace    $i3_background  $i3_color5  $i3_color7
-    }
+  colors {
+    background  #212121
+    statusline  #DDDDDD
+    separator   #666666
+    # class             border  backgr. text
+    focused_workspace   #2B83A6 #2B83A6 #FFFFFF
+    active_workspace    #212121 #212121 #FFFFFF
+    inactive_workspace  #212121 #212121 #86888C
+    urgent_workspace    #2F343A #D64E4E #FFFFFF
+  }
 }
 
 # Hide/show i3status bar
 bindsym $mod+m bar mode toggle
-
-# Theme colors
-# class                 border      backgr.     text        indic.      child_border
-client.focused          $i3_color8  $i3_color8  $i3_color11 $i3_color12
-client.focused_inactive $i3_color9  $i3_color9  $i3_color4  $i3_color10
-client.unfocused        $i3_color9  $i3_color9  $i3_color4  $i3_color10
-client.urgent           $i3_color13 $i3_color12 $i3_color4  $i3_color14
-client.placeholder      $i3_color15 $i3_color17 $i3_color16 $i3_color15 $i3_color17
-
-client.background       $i3_background
 
 #############################
 ### settings for i3-gaps: ###
