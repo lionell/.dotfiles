@@ -1,0 +1,5 @@
+# Ignore everything
+*
+# Whitelist only config.fish and .gitignore
+!config.fish
+!.gitignore
