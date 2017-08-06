@@ -40,7 +40,7 @@ if ($status eq 'Discharging') {
 	$full_text = ' ';
 } elsif ($status eq 'Charging') {
 	$full_text = '  ';
-} elsif ($status eq 'Full') {
+} else {
 	$full_text = '  ';
 }
 
