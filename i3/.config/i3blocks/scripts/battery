@@ -37,10 +37,18 @@ $status = $1;
 $percent = $2;
 
 if ($status eq 'Discharging') {
-	$full_text = ' ';
+  if ($percent < 25) {
+    $full_text = ' ';
+  } elsif ($percent < 50) {
+    $full_text = ' ';
+  } elsif ($percent < 75) {
+    $full_text = ' ';
+  } elsif ($percent < 100) {
+    $full_text = ' ';
+  }
 } elsif ($status eq 'Charging') {
 	$full_text = '  ';
-} else {
+} else { # Charged
 	$full_text = '  ';
 }
 
