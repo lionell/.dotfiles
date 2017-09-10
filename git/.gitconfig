@@ -3,3 +3,5 @@
 	email = xlionell@gmail.com
 [core]
 	editor = vim
+[alias]
+	co = checkout
