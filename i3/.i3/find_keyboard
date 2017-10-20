@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+import subprocess
+import re
+import sys
+
+if len(sys.argv) < 2:
+    sys.exit("Error! Please specify at least one word to look for.")
+keyboard = " ".join(sys.argv[1:])
+
+completed = subprocess.run(["xinput", "-list"], stdout=subprocess.PIPE)
+lines = completed.stdout.decode("utf-8").split("\n")
+
+for line in lines:
+    i = line.find(keyboard)
+    if i == -1: continue
+    id = re.search(r"id=(\d*)", line).group(1)
+    print(id)

@@ -60,8 +60,10 @@ bindsym Print exec --no-startup-id i3-scrot
 # bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 # bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 # bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-bindsym $mod+t exec --no-startup-id xrandr --output eDP1 --primary --mode 1600x900 --pos 1920x810 --output HDMI1 --mode 1920x1200 --pos 0x0
-bindsym $mod+Shift+t exec --no-startup-id xrandr --output eDP1 --primary --mode 1600x900 --output HDMI1 --off
+
+# Multi display support
+bindsym $mod+t exec --no-startup-id /home/lionell/.i3/display/two
+bindsym $mod+Shift+t exec --no-startup-id /home/lionell/.i3/display/one
 
 focus_follows_mouse yes
 
@@ -245,7 +247,14 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id tmux new -s 0 -d
 exec_always --no-startup-id fix_xcursor
-exec --no-startup-id setxkbmap -layout us -variant colemak
+
+# Yubikey requires QWERTY
+exec --no-startup-id setxkbmap -device $(/home/lionell/.i3/find_keyboard Yubikey) -layout us
+# Builtin keyboard
+exec --no-startup-id setxkbmap -device $(/home/lionell/.i3/find_keyboard AT Translated Set 2) -layout us -variant colemak
+
+# Auto identify second display
+exec_always --no-startup-id /home/lionell/.i3/display/auto
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
