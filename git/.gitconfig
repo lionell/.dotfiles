@@ -8,3 +8,5 @@
 	s = status
 	c = commit
 	a = add
+	ph = push
+	pl = pull
