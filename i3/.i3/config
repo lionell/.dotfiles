@@ -20,6 +20,8 @@ hide_edge_borders none
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
+font pango:Source Code Pro, FontAwesome 12
+
 # Start a terminal
 bindsym $mod+Return exec --no-startup-id $terminal
 

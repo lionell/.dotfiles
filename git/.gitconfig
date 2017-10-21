@@ -5,3 +5,6 @@
 	editor = vim
 [alias]
 	co = checkout
+	s = status
+	c = commit
+	a = add
