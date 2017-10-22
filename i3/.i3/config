@@ -253,7 +253,7 @@ exec_always --no-startup-id fix_xcursor
 # Yubikey requires QWERTY
 exec --no-startup-id setxkbmap -device $(/home/lionell/.i3/find_keyboard Yubikey) -layout us
 # Builtin keyboard
-exec --no-startup-id setxkbmap -device $(/home/lionell/.i3/find_keyboard AT Translated Set 2) -layout us -variant colemak
+exec --no-startup-id setxkbmap -device $(/home/lionell/.i3/find_keyboard AT Translated Set 2) -layout us,ua,ru,us -variant colemak,,, -option grp:shift_caps_toggle
 
 # Auto identify second display
 exec_always --no-startup-id /home/lionell/.i3/display/auto
