@@ -6,6 +6,7 @@
 [alias]
 	co = checkout
 	s = status
+	l = log
 	c = commit
 	a = add
 	ph = push
