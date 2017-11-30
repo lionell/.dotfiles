@@ -20,7 +20,7 @@ Plug 'tpope/vim-sensible'
 " let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 
 " Golang
-" Plug 'fatih/vim-go'
+Plug 'fatih/vim-go'
 
 " Tag list
 " Plug 'majutsushi/tagbar'
