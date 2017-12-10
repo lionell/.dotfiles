@@ -9,5 +9,6 @@
 	l = log
 	c = commit
 	a = add
+  d = diff
 	ph = push
 	pl = pull
