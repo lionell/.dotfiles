@@ -22,6 +22,8 @@ Plug 'tpope/vim-sensible'
 " Golang
 Plug 'fatih/vim-go'
 
+Plug 'tomlion/vim-solidity'
+
 " Tag list
 " Plug 'majutsushi/tagbar'
 " nmap <F8> :TagbarToggle<CR>
