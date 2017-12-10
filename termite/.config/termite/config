@@ -2,7 +2,7 @@
 scrollback_lines = 1000001
 font             = Source Code Pro Regular 13
 clickable_url    = true
-browser          = google-chrome-stable
+browser          = google-chrome-unstable
 allow_bold       = true
 allow_italic     = true
 visible_bell     = false
