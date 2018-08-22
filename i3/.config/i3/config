@@ -1,6 +1,21 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+bindsym $mod+s exec --no-startup-id scrot ~/screenshot.png
+exec --no-startup-id setxkbmap -device (xinput -list | grep 'Yubikey' | grep -Po 'id=(\d+)' | cut -d= -f2) -layout us
+exec --no-startup-id /home/lionell/.scripts/auto
+# Swap LCTRL and LWIN on the Mac layout
+exec --no-startup-id /home/lionell/.scripts/keybr
+# exec --no-startup-id blueman-applet
+
+bindsym $mod+t exec --no-startup-id chromium
+bindsym $mod+e exec --no-startup-id emacs
+bindsym $mod+p exec --no-startup-id /home/lionell/.scripts/auto
+
+# Lock screen
+bindsym $mod+Ctrl+l exec --no-startup-id i3lock-pixeled
+bindsym XF86Tools   exec --no-startup-id i3lock-pixeled
+
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod1
 
@@ -62,10 +77,6 @@ bindsym Print exec --no-startup-id i3-scrot
 # bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 # bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 # bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-
-# Multi display support
-bindsym $mod+t exec --no-startup-id /home/lionell/.i3/display/two
-bindsym $mod+Shift+t exec --no-startup-id /home/lionell/.i3/display/one
 
 focus_follows_mouse yes
 
@@ -201,9 +212,9 @@ mode "$mode_system" {
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
     bindsym u exec --no-startup-id i3exit switch_user, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"
 
     # Exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
@@ -234,33 +245,26 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-# Lock screen
-bindsym $mod+Ctrl+l exec --no-startup-id blurlock
-
 # Autostart applications
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id blueman-applet
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+# exec --no-startup-id nm-applet
+# exec --no-startup-id xfce4-power-manager
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 # exec --no-startup-id xautolock -time 10 -locker blurlock
-exec --no-startup-id tmux new -s 0 -d
-exec_always --no-startup-id fix_xcursor
+# exec --no-startup-id tmux new -s 0 -d
+# exec_always --no-startup-id fix_xcursor
 
 # Yubikey requires QWERTY
-exec --no-startup-id setxkbmap -device $(/home/lionell/.i3/find_keyboard Yubikey) -layout us
+# exec --no-startup-id setxkbmap -device $(/home/lionell/.i3/find_keyboard Yubikey) -layout us
 # Builtin keyboard
-exec --no-startup-id setxkbmap -device $(/home/lionell/.i3/find_keyboard AT Translated Set 2) -layout us,ua,ru,us -variant colemak,,, -option grp:shift_caps_toggle
-
-# Auto identify second display
-exec_always --no-startup-id /home/lionell/.i3/display/auto
+# exec --no-startup-id setxkbmap -device $(/home/lionell/.i3/find_keyboard AT Translated Set 2) -layout us,ua,ru,us -variant colemak,,, -option grp:shift_caps_toggle
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-  status_command i3blocks
+  status_command i3status
   position top
   strip_workspace_numbers true
 
@@ -284,7 +288,7 @@ bar {
 }
 
 # Hide/show i3status bar
-bindsym $mod+m bar mode toggle
+# bindsym $mod+m bar mode toggle
 
 #############################
 ### settings for i3-gaps: ###

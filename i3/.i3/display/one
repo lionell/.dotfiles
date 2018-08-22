@@ -1,3 +1,0 @@
-#!/bin/sh
-
-xrandr --output eDP1 --primary --mode 1600x900 --output HDMI1 --off

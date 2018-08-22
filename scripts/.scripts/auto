@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+if xrandr | grep -q "HDMI1 connected"; then
+    /home/lionell/.scripts/2disp
+else
+    /home/lionell/.scripts/1disp
+fi

@@ -9,5 +9,4 @@ Xft.hinting:    false
 Xft.hintstyle:  hintslight
 Xft.lcdfilter:  lcddefault
 
-#include ".Xresources.d/solarized/Xresources.dark"
 #include ".Xresources.d/rofi/Xresources"

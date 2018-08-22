@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+xrandr --output eDP1 --primary --mode 1920x1080 --pos 1920x808 --output HDMI1 --auto --pos 0x0
+feh --bg-scale /home/lionell/.wallpapers/other.png --bg-scale /home/lionell/.wallpapers/oculus.jpg
+/home/lionell/.scripts/keybr

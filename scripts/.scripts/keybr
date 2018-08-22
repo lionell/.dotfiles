@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+for i in $(xinput -list | grep 'Das' | grep -Po 'id=(\d+)' | cut -d= -f2)
+do
+	setxkbmap -device $i -option
+	setxkbmap -device $i -layout 'us, ua' -variant 'colemak,' -option 'ctrl:swap_lwin_lctl, grp:caps_toggle'
+done

@@ -5,10 +5,10 @@
 	editor = vim
 [alias]
 	co = checkout
-	s = status
+	st = status
 	l = log
 	c = commit
 	a = add
-  d = diff
+        d = diff
 	ph = push
 	pl = pull

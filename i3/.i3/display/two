@@ -1,6 +1,0 @@
-#!/bin/sh
-
-xrandr --output eDP1 --primary --mode 1600x900 --pos 1930x810 --output HDMI1 --mode 1920x1200 --pos 0x0
-for KB in $(/home/lionell/.i3/find_keyboard Das Keyboard); do
-  $(setxkbmap -device ${KB} -layout us,ua,ru,us -variant colemak,,, -option grp:shift_caps_toggle)
-done

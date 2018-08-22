@@ -1,9 +1,0 @@
-#!/bin/bash
-
-OUT="$(xrandr | grep 'HDMI1 connected')"
-if [ $? ]
-then
-  $(/home/lionell/.i3/display/two)
-else
-  $(/home/lionell/.i3/display/one)
-fi
