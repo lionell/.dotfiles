@@ -53,5 +53,5 @@ battery 0 {
 }
 
 tztime local {
-	format = "  %H:%M"
+	format = "   %H:%M"
 }
