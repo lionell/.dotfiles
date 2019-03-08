@@ -16,6 +16,7 @@ general {
 }
 
 order += "wireless wlp4s0"
+order += "disk /"
 order += "load"
 order += "volume master"
 order += "battery 0"
@@ -24,6 +25,11 @@ order += "tztime local"
 wireless wlp4s0 {
     format_up = "  %quality @ %essid "
     format_down = "   :( "
+}
+
+disk / {
+    format = "   %percentage_avail "
+    low_threshold = 10
 }
 
 load {
