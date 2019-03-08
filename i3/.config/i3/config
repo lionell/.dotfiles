@@ -1,14 +1,15 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+set $mod Mod4
+
 bindsym $mod+s exec --no-startup-id scrot ~/screenshot.png
-exec --no-startup-id setxkbmap -device (xinput -list | grep 'Yubikey' | grep -Po 'id=(\d+)' | cut -d= -f2) -layout us
 exec --no-startup-id /home/lionell/.scripts/auto
 # Swap LCTRL and LWIN on the Mac layout
 exec --no-startup-id /home/lionell/.scripts/keybr
 # exec --no-startup-id blueman-applet
 
-bindsym $mod+t exec --no-startup-id chromium
+bindsym $mod+t exec --no-startup-id chromium --allow-file-access-from-files
 bindsym $mod+e exec --no-startup-id emacs
 bindsym $mod+p exec --no-startup-id /home/lionell/.scripts/auto
 
@@ -17,7 +18,6 @@ bindsym $mod+Ctrl+l exec --no-startup-id i3lock-pixeled
 bindsym XF86Tools   exec --no-startup-id i3lock-pixeled
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
-set $mod Mod1
 
 # Default terminal emulator
 set $terminal termite
@@ -61,6 +61,8 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym $mod+bracketright exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym $mod+bracketleft exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # Screen brightness controls
