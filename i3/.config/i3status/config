@@ -38,10 +38,7 @@ load {
 
 volume master {
 	format = "   %volume " 
-        format_muted = "   Mute "
-	device = "default"
-	mixer = "Master"
-	mixer_idx = 0
+        format_muted = "   %volume "
 }
 
 battery 0 {
