@@ -16,6 +16,7 @@ general {
 }
 
 order += "wireless wlp4s0"
+order += "cpu_temperature 0"
 order += "disk /"
 order += "load"
 order += "volume master"
@@ -25,6 +26,10 @@ order += "tztime local"
 wireless wlp4s0 {
     format_up = "  %quality @ %essid "
     format_down = "   :( "
+}
+
+cpu_temperature 0 {
+    format = "    %degrees°C "
 }
 
 disk / {
