@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
-for i in $(xinput -list | grep 'Das' | grep -Po 'id=(\d+)' | cut -d= -f2)
-do
-	setxkbmap -device $i -option
-	setxkbmap -device $i -layout 'us, ua' -variant 'colemak,' -option 'ctrl:swap_lwin_lctl, grp:caps_toggle'
-done
+
+function find_kb() {
+	xinput -list | grep "$1" | grep -Po 'id=(\d+)' | cut -d= -f2
+}
+
+setxkbmap -layout us -option ''
+setxkbmap -device $(find_kb 'AT Translated Set 2 keyboard') -layout 'us, ua' -variant 'colemak,' -option 'ctrl:swap_lalt_lctl, lv3:caps_switch, lv3:ralt_alt, grp:alt_space_toggle'
+# setxkbmap -device $(find_kb 'AT Translated Set 2 keyboard') -layout 'us, us, ua' -variant 'colemak,,' -option 'ctrl:swap_lalt_lctl, lv3:caps_switch, lv3:ralt_alt, grp:alt_space_toggle'
+xmodmap -e 'keycode  44 = n N Cyrillic_o Cyrillic_O Left Left'
+xmodmap -e 'keycode  45 = e E Cyrillic_el Cyrillic_EL Down Down'
+xmodmap -e 'keycode  46 = i I Cyrillic_de Cyrillic_DE Right Right'
+xmodmap -e 'keycode  31 = u U Cyrillic_sha Cyrillic_SHA Up Up'
+# xinput set-button-map $(find_kb 'Evoluent') 1 2 3 4 5 6 7 9 2 8
