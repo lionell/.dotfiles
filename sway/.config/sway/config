@@ -218,4 +218,8 @@ smart_gaps on
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 
+# Configure border style <normal|1pixel|pixel xx|none|pixel>
+# This makes windows don't have titlebars
+default_border pixel 2
+
 include /etc/sway/config.d/*
