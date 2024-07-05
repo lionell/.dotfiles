@@ -24,7 +24,7 @@
 		"pulseaudio",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
-		"memory",
+		"backlight",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"cpu",
@@ -71,7 +71,7 @@
 	},
 	"clock#3": {
 		"format": "{:%m-%d}",
-		"tooltip": false
+		"tooltip-format": "<tt><small>{calendar}</small></tt>"
 	},
 
 	"pulseaudio": {
@@ -89,9 +89,14 @@
 		"on-click": "pamixer -t",
 		"on-click-right": "pavucontrol"
 	},
-	"memory": {
-		"interval": 5,
-		"format": "Mem {}%"
+
+	"backlight": {
+		"format": "{icon} {percent}%",
+		"format-icons": ["", "", "", "", "", "", "", "", ""],
+		"on-scroll-up": "brightnessctl set +5%",
+		"on-click": "brightnessctl set +5%",
+		"on-scroll-down": "brightnessctl set 5%-",
+		"on-click-right": "brightnessctl set 5%-"
 	},
 	"cpu": {
 		"interval": 5,
