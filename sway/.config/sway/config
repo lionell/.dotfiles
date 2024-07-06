@@ -142,9 +142,9 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
-bindsym $mod+Comma exec playerctl next
+bindsym $mod+Comma exec playerctl previous
 bindsym $mod+Period exec playerctl play-pause
-bindsym $mod+Slash exec playerctl previous
+bindsym $mod+Slash exec playerctl next
 
 #
 # Layout stuff:
