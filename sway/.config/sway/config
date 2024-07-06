@@ -78,8 +78,9 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 }
 
 # Startup statusbar applets and indicators
-exec nm-applet --indicator
 exec env XDG_CURRENT_DESKTOP=gnome /usr/share/goobuntu-indicator/goobuntu_indicator.py
+exec nm-applet --indicator
+exec blueman-applet
 
 ### Key bindings
 #
