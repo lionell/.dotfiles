@@ -76,18 +76,14 @@
 
 	"pulseaudio": {
 		"format": "{icon} {volume:2}%",
-		"format-bluetooth": "{icon}  {volume}%",
-		"format-muted": "MUTE",
+		"format-bluetooth": "{icon} {volume:2}%",
+		"format-muted": "  {volume:2}%",
 		"format-icons": {
-			"headphones": "",
-			"default": [
-				"",
-				""
-			]
+			"headphones": " ",
+			"default": [" ", " "]
 		},
 		"scroll-step": 5,
-		"on-click": "pamixer -t",
-		"on-click-right": "pavucontrol"
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
 	},
 
 	"backlight": {
