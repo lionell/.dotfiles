@@ -80,15 +80,16 @@
 		"format-muted": "  {volume:2}%",
 		"format-icons": {
 			"headphones": " ",
-			"default": [" ", " "]
+			"default": [" ", " ", " "]
 		},
-		"scroll-step": 5,
 		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"tooltip": false
 	},
 
 	"backlight": {
 		"format": "{icon} {percent}%",
 		"format-icons": ["", "", "", "", "", "", "", "", ""],
+		"tooltip": false
 	},
 	"cpu": {
 		"interval": 5,
