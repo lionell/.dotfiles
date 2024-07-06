@@ -21,6 +21,7 @@
 	],
 	"modules-right": [
 		"custom/left-arrow-dark",
+		"mpris",
 		"pulseaudio",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
@@ -75,21 +76,29 @@
 	},
 
 	"pulseaudio": {
-		"format": "{icon} {volume:2}%",
-		"format-bluetooth": "{icon} {volume:2}%",
-		"format-muted": "  {volume:2}%",
+		"format": "{icon}",
+		"format-bluetooth": "{icon}",
+		"format-muted": " ",
 		"format-icons": {
 			"headphones": " ",
 			"default": [" ", " ", " "]
 		},
 		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-		"tooltip": false
+		"tooltip-format": "{volume:2}%"
 	},
-
+	"mpris": {
+		"format": "{status_icon} {title}",
+		"max-length": 20,
+		"ellipsis": "",
+		"status-icons": {
+			"playing": "",
+			"paused": ""
+		},
+	},
 	"backlight": {
-		"format": "{icon} {percent}%",
+		"format": "{icon}",
 		"format-icons": ["", "", "", "", "", "", "", "", ""],
-		"tooltip": false
+		"tooltip-format": "{percent}%"
 	},
 	"sway/language": {
 		"format": "{flag}",
@@ -97,7 +106,7 @@
 		"on-click": "swaymsg input type:keyboard xkb_switch_layout next"
 	},
 	"battery": {
-		"format": "{icon} {capacity}%",
+		"format": "{icon}",
 		"format-icons": {
 			"default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 			"plugged": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]

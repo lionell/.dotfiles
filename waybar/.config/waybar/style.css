@@ -22,6 +22,7 @@ window#waybar {
 #clock.1,
 #clock.2,
 #clock.3,
+#mpris,
 #pulseaudio,
 #backlight,
 #language,
@@ -48,7 +49,7 @@ window#waybar {
 	padding: 0 3px;
 }
 
-#pulseaudio {
+#pulseaudio,#mpris {
 	color: #268bd2;
 }
 #backlight {
@@ -65,7 +66,7 @@ window#waybar {
 }
 
 #clock,
-#pulseaudio,
+#mpris, #pulseaudio,
 #backlight,
 #language,
 #battery,
