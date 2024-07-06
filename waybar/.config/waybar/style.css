@@ -26,7 +26,7 @@ window#waybar {
 #backlight,
 #cpu,
 #battery,
-#disk,
+#custom-weather,
 #tray {
 	background: #1a1a1a;
 }
@@ -60,7 +60,7 @@ window#waybar {
 #battery {
 	color: #859900;
 }
-#disk {
+#custom-weather {
 	color: #b58900;
 }
 
@@ -69,6 +69,6 @@ window#waybar {
 #backlight,
 #cpu,
 #battery,
-#disk {
+#custom-weather {
 	padding: 0 10px;
 }

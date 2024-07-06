@@ -33,7 +33,7 @@
 		"battery",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
-		"disk",
+		"custom/weather",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"tray"
@@ -102,10 +102,12 @@
 			"plugged": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
 		}
 	},
-	"disk": {
-		"interval": 5,
-		"format": "Disk {percentage_used:2}%",
-		"path": "/"
+	"custom/weather": {
+		"exec": "${HOME}/.config/waybar/scripts/get_weather.sh",
+		"return-type": "json",
+		"format": "{}",
+		"tooltip": true,
+		"interval": 3600
 	},
 	"tray": {
 		"icon-size": 20
