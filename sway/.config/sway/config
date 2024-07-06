@@ -142,10 +142,9 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
-# Things below don't exist on ThinkPad keyboards
-# bindsym XF86AudioPlay exec playerctl play-pause
-# bindsym XF86AudioNext exec playerctl next
-# bindsym XF86AudioPrev exec playerctl previous
+bindsym $mod+Comma exec playerctl next
+bindsym $mod+Period exec playerctl play-pause
+bindsym $mod+Slash exec playerctl previous
 
 #
 # Layout stuff:
