@@ -89,10 +89,6 @@
 	"backlight": {
 		"format": "{icon} {percent}%",
 		"format-icons": ["", "", "", "", "", "", "", "", ""],
-		"on-scroll-up": "brightnessctl set +5%",
-		"on-click": "brightnessctl set +5%",
-		"on-scroll-down": "brightnessctl set 5%-",
-		"on-click-right": "brightnessctl set 5%-"
 	},
 	"cpu": {
 		"interval": 5,
