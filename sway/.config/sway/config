@@ -81,6 +81,7 @@ bindsym $mod+BackSpace input type:keyboard xkb_switch_layout next
 exec env XDG_CURRENT_DESKTOP=gnome /usr/share/goobuntu-indicator/goobuntu_indicator.py
 exec nm-applet --indicator
 exec blueman-applet
+exec gammastep-indicator
 
 ### Key bindings
 #
