@@ -24,7 +24,7 @@ window#waybar {
 #clock.3,
 #pulseaudio,
 #backlight,
-#cpu,
+#language,
 #battery,
 #custom-weather,
 #tray {
@@ -54,7 +54,7 @@ window#waybar {
 #backlight {
 	color: #2aa198;
 }
-#cpu {
+#language {
 	color: #6c71c4;
 }
 #battery {
@@ -67,7 +67,7 @@ window#waybar {
 #clock,
 #pulseaudio,
 #backlight,
-#cpu,
+#language,
 #battery,
 #custom-weather {
 	padding: 0 10px;

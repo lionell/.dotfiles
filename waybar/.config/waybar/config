@@ -27,7 +27,7 @@
 		"backlight",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
-		"cpu",
+		"sway/language",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"battery",
@@ -91,9 +91,10 @@
 		"format-icons": ["", "", "", "", "", "", "", "", ""],
 		"tooltip": false
 	},
-	"cpu": {
-		"interval": 5,
-		"format": "CPU {usage:2}%"
+	"sway/language": {
+		"format": "{flag}",
+		"tooltip-format": "{long}",
+		"on-click": "swaymsg input type:keyboard xkb_switch_layout next"
 	},
 	"battery": {
 		"format": "{icon} {capacity}%",
