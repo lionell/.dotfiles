@@ -20,14 +20,11 @@ set $term foot
 # on the original workspace that the command was run on.
 set $menu rofi -show run | xargs swaymsg exec --
 
-font pango:RobotoMono Nerd Font 16
-
+include ~/.config/sway/style.conf
 include ~/.config/sway/input.conf
 include ~/.config/sway/output.conf
 include ~/.config/sway/idle.conf
 include ~/.config/sway/startup.conf
-
-bindsym $mod+0 exec wlogout -p layer-shell
 
 ### Key bindings
 #
@@ -44,6 +41,9 @@ bindsym $mod+d exec $menu
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
+
+# Logout menu
+bindsym $mod+0 exec wlogout -p layer-shell
 
 #
 # Moving around:
@@ -107,30 +107,6 @@ bindsym $mod+a focus parent
 bar {
 	swaybar_command waybar
 }
-
-#
-# Gaps
-#
-
-# Set inner/outer gaps
-gaps inner 10
-gaps outer -4
-
-# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
-# gaps inner|outer current|all set|plus|minus <px>
-# gaps inner all set 10
-# gaps outer all plus 5
-
-# Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
-
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
-# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
-
-# Configure border style <normal|1pixel|pixel xx|none|pixel>
-# This makes windows don't have titlebars
-default_border pixel 2
 
 include /etc/sway/config.d/*
 
