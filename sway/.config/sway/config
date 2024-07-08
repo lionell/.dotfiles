@@ -25,15 +25,9 @@ font pango:RobotoMono Nerd Font 16
 include ~/.config/sway/input.conf
 include ~/.config/sway/output.conf
 include ~/.config/sway/idle.conf
+include ~/.config/sway/startup.conf
 
 bindsym $mod+0 exec wlogout -p layer-shell
-
-# Startup statusbar applets and indicators
-exec env XDG_CURRENT_DESKTOP=gnome /usr/share/goobuntu-indicator/goobuntu_indicator.py
-exec nm-applet --indicator
-exec blueman-applet
-exec gammastep-indicator
-exec dunst
 
 ### Key bindings
 #
