@@ -82,6 +82,7 @@ exec env XDG_CURRENT_DESKTOP=gnome /usr/share/goobuntu-indicator/goobuntu_indica
 exec nm-applet --indicator
 exec blueman-applet
 exec gammastep-indicator
+exec dunst
 
 ### Key bindings
 #
