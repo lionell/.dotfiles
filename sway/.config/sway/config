@@ -25,6 +25,8 @@ include ~/.config/sway/input.conf
 include ~/.config/sway/output.conf
 include ~/.config/sway/idle.conf
 include ~/.config/sway/startup.conf
+include ~/.config/sway/workspaces.conf
+include ~/.config/sway/multimedia.conf
 
 ### Key bindings
 #
@@ -69,9 +71,6 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
-include ~/.config/sway/workspaces.conf
-include ~/.config/sway/multimedia.conf
 
 #
 # Layout stuff:
