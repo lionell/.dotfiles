@@ -24,23 +24,9 @@ font pango:RobotoMono Nerd Font 16
 
 include ~/.config/sway/input.conf
 include ~/.config/sway/output.conf
+include ~/.config/sway/idle.conf
 
-### Idle configuration
-#
-# Example configuration:
-#
 bindsym $mod+0 exec wlogout -p layer-shell
-
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-exec swayidle -w \
-         timeout 300 'swaylock' \
-         timeout 600 'swaymsg "output * power off"' \
-	      resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock'
-
-
 
 # Startup statusbar applets and indicators
 exec env XDG_CURRENT_DESKTOP=gnome /usr/share/goobuntu-indicator/goobuntu_indicator.py
